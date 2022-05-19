@@ -1,0 +1,15 @@
+[package]
+name = "dumbclip"
+version = "0.1.0"
+authors = ["Ed Cashin <ed.cashin@acm.org>"]
+license = "BSD-3-Clause"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# lv2 = "0.6.0"
+lv2 = { git = "https://github.com/RustAudio/rust-lv2.git" }
+lv2-core = { git = "https://github.com/RustAudio/rust-lv2.git" }
+urid = "0.1.0"

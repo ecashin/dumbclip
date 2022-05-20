@@ -2,6 +2,8 @@
 
 DumbClip is a hard clipper that doesn't try to be smart.
 
+![clipped waveform](images/dumbclip.png)
+
 ## Build
 
 DumbClip is written in [Rust](https://www.rust-lang.org/)

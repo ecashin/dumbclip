@@ -34,7 +34,7 @@ impl Plugin for DumbClip {
         for (input_sample, output_sample) in Iterator::zip(ports.input.iter(), ports.output.iter())
         {
             let sample = input_sample.get() * coef;
-            output_sample.set(sample.clamp(-1.0, 1.0));
+            output_sample.set(sample.clamp(-1.0, 1.0) / coef);
         }
     }
 }

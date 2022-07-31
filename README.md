@@ -13,7 +13,7 @@ It has been tested only on Linux,
 where it can be installed as shown in the example below.
 
     cargo build --release && \
-    cp target/debug/libdumbclip.so dumbclip-lv2/ && \
+    cp target/release/libdumbclip.so dumbclip-lv2/ && \
     sudo cp -a dumbclip-lv2/ /usr/local/lib/lv2/
 
 ## Usage
@@ -28,7 +28,10 @@ coming in exceeds the limits of -1.0 and 1.0.
 To clip more, turn up the level of the incoming signal.
 
 The plugin's gain control can be used to elevate the incoming signal,
-or you can raise the level of the incoming signal outside the plugin.
+resulting in more clipping,
+but this change is "undone" after clipping is performed.
+To increase gain persistently,
+you can raise the level of the incoming signal outside the plugin.
 
 You can lower the level coming out of the plugin to keep the level sane.
 
